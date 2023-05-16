@@ -1,0 +1,108 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} Contact {% endblock %}
+
+{% block body %}
+
+
+<!-- Header -->
+<!-- END Header -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-uppercase mb-4">Contact Us</h2>
+                <ul class="breadcrumb mb-0 justify-content-center">
+                    <li class="breadcrumb-item"><a href="#"> Home</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- START Contact Section -->
+    <section class="contact-section bg-white sp-100-70">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+
+                    <form action="/shop/contact/" method="post">{% csrf_token %}
+                    <div class="row">
+                        <div class="alert col-md-12 text-center" id="alert"></div>
+                    </div>
+                    <div class="row" id="contactUsBox">
+                        <div class="form-group mb-4 col-lg-6 col-12">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                   id="name">
+                        </div>
+                        <div class="form-group mb-4 col-lg-6 col-12">
+                            <input type="email" class="form-control" placeholder="Your Email"
+                                   name="email" id="email">
+                        </div>
+                        <div class="form-group mb-4  col-12">
+                            <input type="phone" class="form-control" placeholder="Your Phone No."
+                                   name="phone" id="phone">
+                        </div>
+                        <div class="form-group mb-1 col-12">
+                            <textarea rows="6" name="query" class="form-control br-10"
+                                      placeholder="How may we help you?"
+                                      id="query"></textarea>
+                        </div>
+
+                    <input type='hidden' name='recaptcha_token' id='recaptcha_token'>
+                    </div>
+
+                        <div class="col-12" style="margin-top: 12px;">
+                            <button type="button" class="btn btn-lg btn-outline-primary">
+                                Submit
+                            </button>
+                        </div>
+
+                    </form>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- END Contact Section -->
+
+
+<!-- Cta -->
+<section class="cta-section position-relative">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-12 mb-30">
+                <h3 class="my-3 mb-4">We will solve your problem soon.</h3>
+    </div>
+</section>
+<!-- End Cta -->
+
+<!-- Footer -->
+
+
+    <div class="footer__bottom top-divider my-5">
+        <div class="container text-center ">
+            <span class="copyright mr-3">
+                Copyright © 2020. All Rights Reserved
+            </span>
+                    </div>
+    </div> <!-- end footer bottom -->
+
+</footer><!-- END Footer -->
+
+
+
+<!-- Scripts -->
+<script src="https://demo-saas.worksuite.biz/saas/vendor/jquery/jquery.min.js"></script>
+<script src="https://demo-saas.worksuite.biz/saas/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://demo-saas.worksuite.biz/saas/vendor/slick/slick.min.js"></script>
+<script src="https://demo-saas.worksuite.biz/saas/vendor/wowjs/wow.min.js"></script>
+<script src="https://demo-saas.worksuite.biz/saas/js/main.js"></script>
+<script src="https://demo-saas.worksuite.biz/front/plugin/froiden-helper/helper.js"></script>
+<!-- Global Required JS -->
+
+
+{% endblock %}
